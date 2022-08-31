@@ -2,12 +2,13 @@ import java.util.Scanner;
 
 
 
-public class CalMain {
+public class Solution {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
         System.out.print("Enter Math Expression (examples: 1+2, -200-100, 2*5.5, 10/2): ");
-        String exp = input.next();
+        String exp = input.nextLine();
+        exp = exp.replaceAll(" ", "");
         double result = 0;
         int operatorLocation = -1, illegal = 0;
         char ch;
